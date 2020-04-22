@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.urbancode.com/PluginXMLSchema_v1"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <header>
+        <identifier id="sample.groovy.property.print" version="1" name="Property Print"/>
+        <description/>
+        <tag>Sample/Groovy/Property Print</tag>
+    </header>
+    <step-type name="Print Properties">
+        <description/>
+        <properties>
+            <property name="textBox" required="true">
+                <property-ui type="textBox" label="Text Box"
+                             description="Text Box value to be printed"/>
+            </property>
+            <property name="textAreaBox" required="true">
+                <property-ui type="textAreaBox" label="Text Area Box"
+                             description="Text Area Box value to be printed"/>
+            </property>
+            <property name="secureBox" required="true">
+                <property-ui type="secureBox" label="Secure Box"
+                             description="Secure Box value to be printed"/>
+            </property>
+            <property name="checkBox" required="true">
+                <property-ui type="checkBox" label="Check Box"
+                             description="Check Box value to be printed"/>
+            </property>
+            <property name="selectBox" required="true">
+                <property-ui type="selectBox" label="Select Box"
+                             description="Select Box value to be printed"/>
+                <value label="Option One">OPTION_ONE</value>
+                <value label="Option Two">OPTION_TWO</value>
+            </property>
+        </properties>
+        <post-processing>
+            <![CDATA[
+                if (properties.get("exitCode") != 0) {
+                    properties.put(new java.lang.String("Status"),
+                        new java.lang.String("Failure"));
+                } else {
+                    properties.put("Status", "Success");
+                }
+            ]]>
+        </post-processing>
+        <command program="${GROOVY_HOME}/bin/groovy">
+            <arg value="-cp"/>
+            <arg path="classes:lib/udclient.jar"/>
+            <arg file="propertyPrint.groovy"/>
+            <arg file="${PLUGIN_INPUT_PROPS}"/>
+            <arg file="${PLUGIN_OUTPUT_PROPS}"/>
+        </command>
+    </step-type>
+</plugin>
