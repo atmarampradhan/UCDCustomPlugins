@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pluginInfo>
+    <author name="Atmaram Pradhan">
+        <organization/>
+        <email/>
+        <website/>
+        <bio/>
+    </author>
+    <integration type="Automation"/>
+    <release-version>0.1</release-version>
+    <release-notes>
+        <release-note plugin-version="1">
+            Initial Release
+        </release-note>
+    </release-notes>
+</pluginInfo>
