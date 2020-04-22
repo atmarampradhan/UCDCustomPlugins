@@ -11,7 +11,7 @@
     <packaging>pom</packaging>
 
     <modules>
-      <module>urban-property-print</module>
+      <module>ucd-print</module>
     </modules>
 
     <build>
