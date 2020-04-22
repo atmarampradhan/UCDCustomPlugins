@@ -11,7 +11,7 @@
     <packaging>pom</packaging>
 
     <modules>
-      <module>ucd-print</module>
+      <module>ucd-plugin</module>
     </modules>
 
     <build>
