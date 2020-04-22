@@ -7,7 +7,7 @@
     <groupId>ap.co.plugin</groupId>
     <artifactId>articles</artifactId>
     <version>0.1.0-SNAPSHOT</version>
-    <name>Articles</name>
+    <name>UCD Custome Plugin</name>
     <packaging>pom</packaging>
 
     <modules>
