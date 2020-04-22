@@ -3,7 +3,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <header>
         <identifier id="sample.groovy.property.print" version="1" name="Property Print"/>
-        <description/>
+        <description>This is a sample Custom Plugin for property print</description>
         <tag>Sample/Groovy/Property Print</tag>
     </header>
     <step-type name="Print Properties">
